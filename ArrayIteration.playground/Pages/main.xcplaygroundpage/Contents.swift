@@ -59,6 +59,16 @@ for items in ingredientsInCart {
 /*: question5
  ### 5. Take the list of shopping cart items you created in question 1 and print their values by passing each item in list to a function to be printed.
  */
+func cartItems() {
+    for items in ingredientsInCart {
+        print(items)
+    }
+}
+
+cartItems()
+
+
+
 // find better way than the following:
 
 // func cartItems() -> String {
@@ -101,17 +111,22 @@ nameGreeting(names)
 /*: question7
  ### 7. Create a function that takes an array of Ints (40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49) and returns an array of Ints. This function should look through the array of Ints and create a new array of Ints that only contain integers less than 50.
  */
+
+
 let numbers = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
 func ambigiousNumbers(numbas: [Int]) -> [Int] {
-    if numbas in numbers < 50
-        print(numbers)
-    
-        return numbers
+    var lessThanFifty: [Int] = []
+    for numbas in numbers {
+        if numbas < 50  {
+            lessThanFifty.append(numbas)
+        }
+    }
+    return lessThanFifty
 }
 
 
-
+print(ambigiousNumbers(numbers))
 
 
 
